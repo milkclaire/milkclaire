@@ -1,0 +1,13 @@
+.env
+.env.*
+
+node_modules/
+.pnpm-store/
+
+logs/
+*.log
+
+.DS_Store
+.vercel
+
+crm/

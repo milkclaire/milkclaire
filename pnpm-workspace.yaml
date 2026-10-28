@@ -1,0 +1,7 @@
+packages:
+  - api
+  - crm
+
+allowBuilds:
+  esbuild: true
+  workerd: false
