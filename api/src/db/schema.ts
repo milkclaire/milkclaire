@@ -32,6 +32,7 @@ export const guests = sqliteTable('guests', {
 	})
 		.notNull()
 		.default('none'),
+	banReason: text('ban_reason'),
 	createdAt: integer('created_at', { mode: 'timestamp' })
 		.notNull()
 		.$defaultFn(() => new Date()),

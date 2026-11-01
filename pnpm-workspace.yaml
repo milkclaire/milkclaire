@@ -1,6 +1,7 @@
 packages:
   - api
   - crm
+  - web
 
 allowBuilds:
   esbuild: true

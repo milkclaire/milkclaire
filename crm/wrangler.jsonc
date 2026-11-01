@@ -1,0 +1,16 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "crm",
+	"main": "./dist/index.js",
+	"compatibility_date": "2026-10-28",
+	"compatibility_flags": ["nodejs_compat"],
+	"assets": {
+		"directory": "./dist",
+	},
+	"services": [
+		{
+			"binding": "API",
+			"service": "api",
+		},
+	],
+}

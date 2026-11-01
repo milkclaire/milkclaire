@@ -3,7 +3,6 @@ import { Hono } from 'hono';
 import { bearerAuth } from 'hono/bearer-auth';
 import { except } from 'hono/combine';
 import { cors } from 'hono/cors';
-import { csrf } from 'hono/csrf';
 import { logger } from 'hono/logger';
 import { secureHeaders } from 'hono/secure-headers';
 
@@ -16,9 +15,8 @@ const app = new Hono<{ Bindings: CloudflareBindings }>()
 		'*',
 		logger(),
 		secureHeaders(),
-		csrf(),
 		cors({
-			origin: 'https://crm.milkclaire.workers.dev',
+			origin: ['https://crm.milkclaire.workers.dev', 'http://localhost:5173'],
 			allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
 		}),
 	)
